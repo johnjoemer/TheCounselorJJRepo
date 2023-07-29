@@ -24,9 +24,17 @@
         <div class="forms">
             <h1>Contact Us</h1>
             <form method="POST" 
-            action="https://script.google.com/macros/s/AKfycbwKs7gQYUR6lVABegxWtva-CYBMnSIaSEfCO9uO0MOktjvSV7U2zflFmULgvHnUwlw/exec">
-            <label for="Name">Name:</label>
-            <input type="text" id="Name" name="Name" required>
+            action="https://script.google.com/macros/s/AKfycbzF1OrzcB3nl7KEaPUqUybtadyifcl8F3xWdx-zcvzsEkeJdR67jFaqD1wGBI9j63eB/exec">
+            <label for="Name">Name</label>
+            <input type="text" name="Name" placeholder="Name">
+
+            <label for="Email">Email</label>
+            <input type="text" name="Email" placeholder="Email">
+
+            <label for="Message">Message</label>
+            <input type="text" name="Message" placeholder="Message">
+
+            <input class="btn" type="submit" value="Submit">
               <!-- Name: <input name="Name" type="text" placeholder="Name" required> -->
               <!-- Email: <input name="Email" type="text" placeholder="Email" required>
               Message: <input name="Message" type="text" placeholder="Message" 
@@ -40,10 +48,31 @@
         
               <label for="message">Message:</label>
               <textarea id="message" name="message" rows="4" required></textarea>
-         -->
+         
               <button type="submit">Submit</button>
+              -->
             </form>
           </div>
     </div>
+
+    <script>
+       // Function to parse URL parameters
+       function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        // Check if the "success" parameter is present in the URL
+        var successParam = getParameterByName('success');
+        if (successParam === 'true') {
+            // Display a success message to the user
+            alert('Form submitted successfully!');
+        }
+    </script>
 </body>
 </html>
