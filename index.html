@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INFJ: The Counselor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--Header Section-->
+    <nav>
+        <div class="left-text">The Counselor</div>
+        <div class="right-texts">
+            <a href="#">Home</a>
+            <a href="scfunction.html">Social Cognitive Functions</a>
+            <a href="subtypes.html">Subtypes</a>
+            <a href="contactus.html">Contact Us</a>
+        </div>
+    </nav>
+    <div class="center-text">
+        INFJ
+    </div>
+    <div class="bottom-line"></div>
+    <div class="INFJ_Meaning">
+        <table>
+          <caption>What they mean...</caption>
+          <tr>
+            <td>I</td>
+            <td>Being an <b>Introvert</b> means valuing your alone time and using it to fuel your creativity and<br>
+              self-reflection. It's a superpower that can help you live a rich and fulfilling life.</td>
+          </tr>
+          <tr>
+            <td>N</td>
+            <td><b>Intuition</b> is like a sixth sense that allows you to access deep knowledge and insights beyond<br>
+              what can be explained by reason. It's a powerful tool for connecting with our innermost self.</td>
+          </tr>
+          <tr>
+            <td>F</td>
+            <td><b>Feeler</b> preferences enable you to connect deeply with others and makes decisions 
+              in <br>alignment with your values. They bring more compassion and understanding
+              into the world <br> and help build a richer, more meaningful relationship.    </td>
+          </tr>
+          <tr>
+            <td>J</td>
+            <td>Being a <b>Judger</b> means having a natural talent for planning, organization, and decision-making. 
+              <br> It's like having a built-in roadmap for achieving our goals and making our dreams a reality.</td>
+          </tr>
+        </table>
+      </div>
+
+    <div class="bottom-line"></div>
+
+    <div class="scf_txt"><h1>Social Cognitive Functions</h1></div>
+
+    <div class="scf_prev">
+      <img class="imgBtn" src="Images/Dominant_Perspective.png" 
+      alt="Dominant_Perspective" onclick="DomAudio()">
+      <audio id="Dom_sound" src="Audios/sample1.mp3" preload="auto"></audio> 
+      <img class="imgBtn" src="Images/Auxiliary_Harmony.png" 
+      alt="Auxiliary_Harmony" onclick="AuxHAudio()">
+      <audio id="Aux_sound" src="Audios/sample2.mp3" preload="auto"></audio>
+      <img class="imgBtn" src="Images/Inferior_Sensation.png" 
+      alt="Inferior_Sensation" onclick="InfAudio()">
+      <audio id="Inf_sound" src="Audios/sample1.mp3" preload="auto"></audio>
+      <img class="imgBtn" src="Images/Tertiary_Accuracy.png" 
+      alt="Tertiary_Accuracy" onclick="TerAudio()">
+      <audio id="Ter_sound" src="Audios/sample2.mp3" preload="auto"></audio>
+    </div>
+
+    <div class="clkmusic"><h2>Click each image to listen</h2></div>
+
+    <div class="btnContainer">
+      <a class="scf_btn" href="scfunction.html">Read More</a>
+    </div>
+
+    <div class="bottom-line"></div>
+
+    <div class="Text_Video">
+      <h2>Learn more about the INFJ Personality below.</h2>
+    </div>
+    
+    <div class="Video">
+      <video width="1024" height="576" controls>
+        <source src="Videos/INFJ.mp4" type="video/mp4">
+        Your browser does not support the video format.
+      </video>
+    </div>
+
+    <script>
+      var currentAudio = 0;
+      var Dom_audio = document.getElementById("Dom_sound");
+      var Aux_audio = document.getElementById("Aux_sound");
+      var Inf_audio = document.getElementById("Inf_sound");
+      var Ter_audio = document.getElementById("Ter_sound");
+
+      function DomAudio() {
+        currentAudio = 1;
+        if (currentAudio == 1) {
+          Aux_audio.pause();
+          Inf_audio.pause();
+          Ter_audio.pause();
+          Dom_audio.play();
+        }
+
+      }
+
+      function AuxHAudio() {
+        currentAudio = 2;
+        if (currentAudio == 2) {
+            Dom_audio.pause();
+            Inf_audio.pause();
+            Ter_audio.pause();
+            Aux_audio.play();
+        }  
+      }
+
+      function InfAudio() {
+        currentAudio = 3;
+        if (currentAudio == 3) {
+            Dom_audio.pause();
+            Aux_audio.pause();
+            Ter_audio.pause();
+            Inf_audio.play();
+        }  
+      }
+      
+      function TerAudio() {
+        currentAudio = 4;
+        if (currentAudio == 4) {
+            Dom_audio.pause();
+            Aux_audio.pause();
+            Inf_audio.pause();
+            Ter_audio.play();
+        }  
+      }
+      
+
+    </script>
+
+</body>
+</html>
